@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "185025952218",
+    "firebase_url": "https://logintes-36918.firebaseio.com",
+    "project_id": "logintes-36918",
+    "storage_bucket": "logintes-36918.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:185025952218:android:9981fbe1d839a621efe8e3",
+        "android_client_info": {
+          "package_name": "com.teslogin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "185025952218-r4p410qc1vsi6i50t6uvcfks9b3ktajv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAVV_ZZguzxqxkifwIVp4Xcx6G2SHV0kkY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "185025952218-r4p410qc1vsi6i50t6uvcfks9b3ktajv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,147 @@
+import React, {Component} from 'react';
+import {
+  Text,
+  View,
+  StyleSheet,
+  TextInput,
+  TouchableOpacity,
+  Image,
+} from 'react-native';
+import {
+  responsiveHeight,
+  responsiveWidth,
+  responsiveFontSize,
+} from 'react-native-responsive-dimensions';
+
+export default class App extends Component {
+  render() {
+    return (
+      <View style={styles.viewContainer}>
+        <View style={styles.viewWrapper}>
+          	<Image  style={styles.imageLogin}
+          			source={require('./src/images/logoTopiq.png')}/>
+
+          <Text style={styles.textTitle}>Welcome to My Apps </Text>
+        </View>
+        <TextInput placeholder="Masukan Email" style={styles.textInput} 
+        style={styles.textInput}
+          placeholderTextColor="rgba(59,46,50,0.8)"
+          secureTextEntry
+        />
+        <TextInput
+          placeholder="Masukan Password"
+          style={styles.textInput}
+          placeholderTextColor="rgba(59,46,50,0.8)"
+          secureTextEntry
+        />
+        
+        <TouchableOpacity>
+          <View style={styles.viewButton}>
+            <Text style={styles.textLogin}>LOGIN</Text>
+          </View>	
+        </TouchableOpacity>
+
+        <View style={styles.signupTextCont}>
+					<Text style={styles.signupText}>Do not have an account yet?</Text>
+					<TouchableOpacity onPress={this.signup}><Text style={styles.signupButton}>  Signup</Text></TouchableOpacity>
+				</View>
+       </View>
+    );
+  }
+}
+
+const styles = StyleSheet.create({
+  viewContainer: {
+
+    flex: 1,
+    backgroundColor: '#fff',
+    justifyContent: 'center',
+ 
+ 
+  },
+
+  textInput: {
+    width: responsiveWidth(90),
+    height: responsiveHeight(7),
+    borderWidth: 1,
+    borderColor: '#3b2e5a',
+    paddingHorizontal:20,
+    paddingBottom: 5,
+    borderRadius: 30,
+    alignSelf: 'center',
+    marginVertical: responsiveHeight(1),
+    fontSize:14
+
+  },
+
+  viewButton: {
+    width: responsiveWidth(90),
+    height: responsiveHeight(7),
+    alignItems: 'center',
+    backgroundColor: '#3b2e5a',
+    justifyContent: 'center',
+    alignSelf: 'center',
+    borderRadius: 30,
+    marginTop: responsiveHeight(1.1),
+
+  },
+
+  textLogin: {
+    fontWeight: 'bold',
+    color: '#FFF',
+    fontSize: responsiveFontSize(2.2),
+
+  },
+
+  imageLogin: {
+
+    width: 100,
+    height: 100,
+
+  },
+
+  viewWrapper: {
+    alignItems: 'center',
+
+  },
+
+  textTitle: {
+    fontSize: responsiveFontSize(2.2),
+    fontWeight: 'bold',
+    color: '#3b2e5a',
+margin: 20,
+marginTop:5,
+marginBottom:5,
+
+
+  },
+ signupTextCont: {
+  	
+    alignItems:'flex-end',
+    justifyContent :'center',
+    paddingVertical:5,
+    flexDirection:'row'
+  },
+  signupText: {
+  	color:'rgba(59,46,50,0.6)',
+  	fontSize:16
+  },
+  signupButton: {
+  	color:'#3b2e5a',
+  	fontSize:16,
+  	fontWeight:'500'
+  },
+  button: {
+    width:300,
+    backgroundColor:'#3b2e5a',
+    borderRadius: 25,
+    marginVertical: 10,
+    paddingVertical: 13
+  },
+  buttonText: {
+    fontSize:16,
+    fontWeight:'500',
+    color:'#ffffff',
+    textAlign:'center'
+  },
+});
